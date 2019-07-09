@@ -9,7 +9,7 @@ let guessChoice = [];
 let computerGuess = [];
 
 //Starts computer's guess
-window.onload = function() {
+window.onload = function () {
     let compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     computerGuess.push(compGuess);
     console.log(computerGuess[0]);
@@ -17,37 +17,37 @@ window.onload = function() {
 
 
 //Game Section
-document.onkeyup = function() {
+document.onkeyup = function () {
     let playerGuess = event.key;
     lettersGuessed.push(playerGuess);
     console.log(playerGuess[0]);
 
 
-if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
-    wins++;
-    guessesLeft = 9;
-    lettersGuessed.length = 0;
-    computerGuess.length = 0;
-    var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    computerGuess.push(compGuess);
-    console.log(computerGuess[0]);
-}
+    if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
+        wins++;
+        guessesLeft = 9;
+        lettersGuessed.length = 0;
+        computerGuess.length = 0;
+        var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        computerGuess.push(compGuess);
+        console.log(computerGuess[0]);
+    }
 
-else if ((playerGuess !== computerGuess[0]) && (guessesLeft > 0)) {
-    guessesLeft = guessesLeft - 1;
-}
+    else if ((playerGuess !== computerGuess[0]) && (guessesLeft > 0)) {
+        guessesLeft = guessesLeft - 1;
+    }
 
-else {
-    losses++;
-    guessesLeft = 9;
-    lettersGuessed.length = 0;
-    computerGuess.length = 0;
-    var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    computerGuess.push(compGuess);
-    console.log(computerGuess[0]);
-}
+    else {
+        losses++;
+        guessesLeft = 9;
+        lettersGuessed.length = 0;
+        computerGuess.length = 0;
+        var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        computerGuess.push(compGuess);
+        console.log(computerGuess[0]);
+    }
 
-var html = "<p>Guess what letter I'm thinking of!</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Your guesses so far: " + lettersGuessed + "</p>";
+    var html = "<p>Guess what letter I'm thinking of!</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Your guesses so far: " + lettersGuessed + "</p>";
 
-document.querySelector("#game").innerHTML = html;
+    document.querySelector("#game").innerHTML = html;
 }
