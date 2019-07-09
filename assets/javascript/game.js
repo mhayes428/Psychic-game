@@ -5,11 +5,11 @@ let computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 let wins = 0;
 let losses = 0;
 let guessesLeft = 9;
-let guessChoice = [];
+let lettersGuessed = [];
 let computerGuess = [];
 
 //Starts computer's guess
-window.onload = function () {
+window.onload = function() {
     let compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     computerGuess.push(compGuess);
     console.log(computerGuess[0]);
@@ -17,7 +17,7 @@ window.onload = function () {
 
 
 //Game Section
-document.onkeyup = function () {
+document.onkeyup = function() {
     let playerGuess = event.key;
     lettersGuessed.push(playerGuess);
     console.log(playerGuess[0]);
