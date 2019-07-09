@@ -8,6 +8,12 @@ let guessesLeft = 9;
 let lettersGuessed = [];
 let computerGuess = [];
 
+window.onload = function() {
+	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess.push(compGuess);
+	console.log(computerGuess[0]);
+}
+
 
 //Game Section
 document.onkeyup = function() {
@@ -40,7 +46,7 @@ document.onkeyup = function() {
         console.log(computerGuess[0]);
     }
 
-    var html = "<p>Guess what letter I'm thinking of!</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Your guesses so far: " + lettersGuessed + "</p>";
+    var html = "<p>Guess the letter I'm thinking of...</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Letters Guessed: " + lettersGuessed + "</p>";
 
     document.querySelector("#game").innerHTML = html;
 }
