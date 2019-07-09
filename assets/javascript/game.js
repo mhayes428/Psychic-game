@@ -16,7 +16,7 @@ window.onload = function() {
 
 
 //Game Section
-document.onkeyup = function() {
+document.onkeyup = function(event) {
     let playerGuess = event.key;
     lettersGuessed.push(playerGuess);
     console.log(playerGuess[0]);
