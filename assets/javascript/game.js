@@ -8,13 +8,6 @@ let guessesLeft = 9;
 let lettersGuessed = [];
 let computerGuess = [];
 
-//Starts computer's guess
-window.onload = function() {
-    let compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    computerGuess.push(compGuess);
-    console.log(computerGuess[0]);
-}
-
 
 //Game Section
 document.onkeyup = function() {
