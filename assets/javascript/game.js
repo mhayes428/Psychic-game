@@ -46,7 +46,7 @@ document.onkeyup = function(event) {
         console.log(computerGuess[0]);
     }
 
-    var html = "<p>Guess the letter I'm thinking of...</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Letters Guessed: " + lettersGuessed + "</p>";
+    var html = "<p>You'll never beat me!</p>" + "<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>" + "<p>Guesses left: " + guessesLeft + "</p>" + "<p>Letters Guessed: " + lettersGuessed + "</p>";
 
     document.querySelector("#game").innerHTML = html;
 }
